@@ -7,7 +7,7 @@ class TestSum(unittest.TestCase):
 		"""
 		test case to add two numbers
 		"""
-		print("test")
+		print("test-webhook also")
 		data=[23,32]
 		result=summation(data)
 		self.assertEqual(result,55)
