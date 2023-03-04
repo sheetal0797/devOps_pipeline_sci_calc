@@ -4,7 +4,7 @@ agent any
 		stage("Declarative Checkout SCM")
 		{
 			steps
-			{ echo "this is checkout SCM"
+			{ echo "this is checkout SCM "
 			}
 		}
 		stage("Git pull")
