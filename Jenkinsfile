@@ -30,7 +30,7 @@ agent any
 		{
 			steps
 			{ sh "docker logout"
-			  sh "docker login --sheetalagarwal=Sheeiiitb11@"
+			  sh "docker login --username=sheetalagarwal --password=Sheeiiitb11@ "
 sh "docker push sheetalagarwal/devops_pipeline_scical_img"
 sh "docker push sheetalagarwal/devops_pipeline_scical_img"	}
 		}
