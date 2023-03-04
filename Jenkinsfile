@@ -43,7 +43,7 @@ sh "docker push sheetalagarwal/devops_pipeline_scical_img"	}
 		{
 			steps
 			{ sh "docker pull sheetalagarwal/devops_pipeline_scical_img"
-sh "docker run -it --name devops_container sheetalagarwal/devops_pipeline_scical_img"
+sh "docker run -i --name devops_container sheetalagarwal/devops_pipeline_scical_img"
 sh "docker attach devops_container"			}
 		}
 		stage("Declarative: Post actions")
