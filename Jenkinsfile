@@ -24,12 +24,15 @@ agent any
 		stage("Build Docker Images")
 		{
 			steps
-			{ sh "docker build -t devops_pipeline_scical_img ."	}
+			{ sh "docker build -t sheetalagarwal/devops_pipeline_scical_img ."	}
 		}
 		stage("Publish Docker Images")
 		{
 			steps
-			{ sh "docker push sheetalagarwal/devops_pipeline_scical_img"	}
+			{ sh "docker logout"
+			  sh "docker login --sheetalagarwal=Sheeiiitb11@"
+sh "docker push sheetalagarwal/devops_pipeline_scical_img"
+sh "docker push sheetalagarwal/devops_pipeline_scical_img"	}
 		}
 		stage("Clean Docker Images")
 		{
