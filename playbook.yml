@@ -1,0 +1,16 @@
+---
+- name: this is just a test
+  hosts: client1
+  gather_facts: true
+  tasks:
+  - name: ping test
+    ping:
+- name: devops pipeline
+  hosts: client1
+  gather_facts: yes
+  become: yes
+  tasks:
+    - name: pull from docker hub
+      shell: docker pull sheetalagarwal/devops_pipeline_scical_img
+    - name: create container
+      shell : docker run -it -d --name devops_container sheetalagarwal/devops_pipeline_scical_img  

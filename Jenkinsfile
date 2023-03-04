@@ -31,7 +31,6 @@ agent any
 			steps
 			{ sh "docker logout"
 			  sh "docker login --username=sheetalagarwal --password=Sheeiiitb11@ "
-sh "docker push sheetalagarwal/devops_pipeline_scical_img"
 sh "docker push sheetalagarwal/devops_pipeline_scical_img"	}
 		}
 		stage("Clean Docker Images")
@@ -42,9 +41,7 @@ sh "docker push sheetalagarwal/devops_pipeline_scical_img"	}
 		stage("Deploy and Run Images")
 		{
 			steps
-			{ sh "docker pull sheetalagarwal/devops_pipeline_scical_img"
-sh "docker run -t --name devops_container sheetalagarwal/devops_pipeline_scical_img"
-sh "docker attach devops_container"			}
+			{ ansiblePlaybook(credentialsId: 'devops_ansible', inventory: 'inventory', playbook:'playbook.yml')}
 		}
 		stage("Declarative: Post actions")
 		{
