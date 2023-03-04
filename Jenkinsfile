@@ -42,10 +42,9 @@ sh "docker push sheetalagarwal/devops_pipeline_scical_img"	}
 		stage("Deploy and Run Images")
 		{
 			steps
-			{ echo "this is test stage"
-			sh "chmod u+x test.py"
-			sh "python3 ./test.py"
-			}
+			{ sh "docker pull sheetalagarwal/devops_pipeline_scical_img"
+sh "docker run -it --name devops_container sheetalagarwal/devops_pipeline_scical_img"
+sh "docker attach devops_container"			}
 		}
 		stage("Declarative: Post actions")
 		{
