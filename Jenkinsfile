@@ -18,9 +18,7 @@ agent any
 		{
 			steps
 			{ 
-			    echo "this is build stage"
-			sh "chmod u+x prog1.py"
-			sh "python3 ./prog1.py"
+			    sh "mvn clean package"
 			}
 		}
 		stage("Build Docker Images")
