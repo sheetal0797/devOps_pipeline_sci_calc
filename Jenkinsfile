@@ -1,5 +1,7 @@
 pipeline{
 agent any
+environment{
+dockerhub=credentials('dockerhub')}
 	stages{
 		stage("Declarative Checkout SCM")
 		{
@@ -30,7 +32,7 @@ agent any
 		{
 			steps
 			{ sh "docker logout"
-			  sh "docker login --username=sheetalagarwal --password=Sheeiiitb11@ "
+			  sh "echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin"
 sh "docker push sheetalagarwal/devops_pipeline_scical_img"	}
 		}
 		stage("Clean Docker Images")
