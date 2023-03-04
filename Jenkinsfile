@@ -24,7 +24,7 @@ agent any
 		stage("Build Docker Images")
 		{
 			steps
-			{ sh "docker build -t devops_pipeline_scical_img"	}
+			{ sh "docker build -t devops_pipeline_scical_img ."	}
 		}
 		stage("Publish Docker Images")
 		{
