@@ -3,16 +3,10 @@ agent any
 environment{
 dockerhub=credentials('dockerhub')}
 	stages{
-		stage("Declarative Checkout SCM")
-		{
-			steps
-			{ echo "tissfdgr is checkout SCM "
-			}
-		}
 		stage("Git pull")
 		{
 			steps
-			{ echo "this is building stage"
+			{ 
 			git url:'https://github.com/sheetal0797/devOps_pipeline_sci_calc.git',branch:'main'
 			}
 		}
@@ -48,7 +42,7 @@ sh "docker push sheetalagarwal/devops_pipeline_scical_img"	}
 		stage("Declarative: Post actions")
 		{
 			steps
-			{ echo "this is test stage"
+			{ echo "post actions stage"
 			}
 		}
 	}

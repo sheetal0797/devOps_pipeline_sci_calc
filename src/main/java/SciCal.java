@@ -14,8 +14,8 @@ public class SciCal
         double number1, number2;
 
         do {
-            System.out.println("Calculator-using-DevOps, Choose to perform operation");
-            System.out.print("Press 1 to find Square Root\nPress 2 to find Factorial\nPress 3 to find Natural Log\nPress 4 to find Power\n" +
+            System.out.println("DevOps_Calculator, Choose to perform operation");
+            System.out.print("Press 1 - Square Root\nPress 2 - Factorial\nPress 3 - Natural Log\nPress 4 - Power\n" +
                     "Press 5 to exit\nEnter your choice: ");
             int choice;
             try {
