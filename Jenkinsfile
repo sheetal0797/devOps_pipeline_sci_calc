@@ -6,7 +6,7 @@ dockerhub=credentials('dockerhub')}
 		stage("Declarative Checkout SCM")
 		{
 			steps
-			{ echo "tis is checkout SCM "
+			{ echo "tissfdgr is checkout SCM "
 			}
 		}
 		stage("Git pull")
