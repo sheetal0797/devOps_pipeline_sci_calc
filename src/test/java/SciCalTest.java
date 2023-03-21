@@ -11,9 +11,7 @@ public class SciCalTest {
     {
         assertEquals("Finding square root of a number for True Positive", 3, obj.sqrt(9), DELTA);
         assertEquals("Finding square root of a number for True Positive", 4, obj.sqrt(16), DELTA);
-
     }
-
     @Test
     public void sqrtFalsePositive()
     {

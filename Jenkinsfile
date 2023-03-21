@@ -32,7 +32,7 @@ sh "docker push sheetalagarwal/devops_pipeline_scical_img"	}
 		stage("Clean Docker Images")
 		{
 			steps
-			{ sh "docker rmi sheetalagarwal/devops_pipeline_scical_img"	}
+			{ sh "docker rmi -f $(docker images -aq)"	}
 		}
 		stage("Deploy and Run Images")
 		{
@@ -42,7 +42,7 @@ sh "docker push sheetalagarwal/devops_pipeline_scical_img"	}
 		stage("Declarative: Post actions")
 		{
 			steps
-			{ echo "Pdost Actions stage"
+			{ echo "Post actions stage"
 			}
 		}
 	}
