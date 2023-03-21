@@ -6,8 +6,6 @@
   tasks:
     - name: pull from docker hub
       shell: docker pull sheetalagarwal/devops_pipeline_scical_img
-    - name: create container
-      shell : docker run -it -d --name devops_container sheetalagarwal/devops_pipeline_scical_img 
 
     - name: get container info
       docker_container_info:
@@ -17,3 +15,6 @@
     - name: remove container if exists
       shell: docker rm devops_container
       when: result.exists
+      
+    - name: create container
+      shell : docker run -it -d --name devops_container sheetalagarwal/devops_pipeline_scical_img 
