@@ -42,7 +42,7 @@ sh "docker push sheetalagarwal/devops_pipeline_scical_img"	}
 		stage("Declarative: Post actions")
 		{
 			steps
-			{ echo "Post actions stage"
+			{ echo "Post Actions stage"
 			}
 		}
 	}
