@@ -1,10 +1,4 @@
 ---
-- name: this is just a test
-  hosts: client1
-  gather_facts: true
-  tasks:
-  - name: ping test
-    ping:
 - name: devops pipeline
   hosts: client1
   gather_facts: yes

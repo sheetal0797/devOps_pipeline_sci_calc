@@ -49,8 +49,6 @@ sh "docker push sheetalagarwal/devops_pipeline_scical_img"	}
 		{
 			steps
 			{ echo "this is test stage"
-			sh "chmod u+x test.py"
-			sh "python3 ./test.py"
 			}
 		}
 	}
