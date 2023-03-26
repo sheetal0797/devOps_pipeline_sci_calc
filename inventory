@@ -41,6 +41,8 @@
 # leading 0s:
 
 ## db-[99:101]-node.example.com
-[demo]
-client1 ansible_host=192.168.17.89 ansible_connection=ssh ansible_user=ansible_usr ansible_sudo_pass=ansible_usr
+#[demo]
+#client1 ansible_host=192.168.17.89 ansible_connection=ssh ansible_user=ansible_usr ansible_sudo_pass=ansible_usr
 #client2 ansible_host=172.16.131.234 ansible_connection=ssh ansible_user=ansible_usr ansible_sudo_pass=asdfghjkl
+[localhost]
+sheetal ansible_connection=local
