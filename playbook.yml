@@ -1,6 +1,6 @@
 ---
 - name: devops pipeline
-  hosts: client1
+  hosts: localhost
   gather_facts: yes
   become: yes
   tasks:
