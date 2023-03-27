@@ -3,7 +3,7 @@ agent any
 environment{
 dockerhub=credentials('dockerhub')}
 	stages{
-		stage("Git pull")
+		stage("Gitt pull")
 		{
 			steps
 			{ 
