@@ -10,7 +10,7 @@ dockerhub=credentials('dockerhub')}
 			git url:'https://github.com/sheetal0797/devOps_pipeline_sci_calc.git',branch:'main'
 			}
 		}
-		stage("Maven Build")
+		stage("Mavenn Build")
 		{
 			steps
 			{ 
